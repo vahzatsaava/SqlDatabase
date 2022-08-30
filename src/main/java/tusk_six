@@ -1,0 +1,20 @@
+CREATE TABLE IF NOT EXISTS courses
+(
+    student VARCHAR(250),
+    class VARCHAR(250)
+    )
+
+    INSERT INTO courses VALUES ('A','MATH')
+    INSERT INTO courses VALUES ('B','MATH')
+    INSERT INTO courses VALUES ('C','MATH')
+    INSERT INTO courses VALUES ('D','MATH')
+    INSERT INTO courses VALUES ('E','MATH')
+    INSERT INTO courses VALUES ('F','BIO')
+    INSERT INTO courses VALUES ('G','English')
+    INSERT INTO courses VALUES ('H','Computer')
+    INSERT INTO courses VALUES ('I','Computer')
+
+SELECT class FROM courses
+GROUP BY class
+HAVING COUNT(class) >= 5
+
