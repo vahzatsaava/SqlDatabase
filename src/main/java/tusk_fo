@@ -1,0 +1,16 @@
+CREATE TABLE person
+(
+    id    int,
+    email VARCHAR(200);
+)
+
+INSERT INTO person VALUES (1,'a@b.com')
+INSERT INTO person VALUES (1,'c@d.com')
+INSERT INTO person VALUES (1,'a@b.com')
+
+
+
+SELECT email
+FROM person
+GROUP BY email
+HAVING COUNT(person) > 1
