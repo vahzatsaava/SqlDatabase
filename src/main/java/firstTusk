@@ -1,0 +1,22 @@
+CREATE TABLE Person
+(
+    PersonID PRIVATE NOT NULL INTEGER ,
+    Name     PRIVATE NOT NULL VARCHAR(200),
+    LastName PRIVATE NOT NULL VARCHAR(200)
+)
+CREATE TABLE Address
+(
+    AddressId PRIVATE NOT NULL INTEGER,
+    PersonId  PRIVATE NOT NULL INTEGER,
+    City      PRIVATE NOT NULL VARCHAR(200),
+    State     PRIVATE NOT NULL VARCHAR(200)
+)
+
+
+INSERT INTO PERSON VALUES (1,'Wang','Allen')
+INSERT INTO Address
+VALUES (1, 2, 'New York City', 'New York')
+
+//запрос
+SELECT name,lastname,city,state FROM Address INNER JOIN Person
+
